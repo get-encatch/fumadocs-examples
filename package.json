@@ -1,0 +1,14 @@
+{
+  "name": "encatch-fumadocs-examples",
+  "private": true,
+  "scripts": {
+    "dev:nextjs": "pnpm --filter nextjs dev",
+    "dev:tanstack": "pnpm --filter tanstack dev",
+    "dev:react-router": "pnpm --filter react-router dev",
+    "dev:waku": "pnpm --filter waku dev",
+    "build:nextjs": "pnpm --filter nextjs build",
+    "build:tanstack": "pnpm --filter tanstack build",
+    "build:react-router": "pnpm --filter react-router build",
+    "build:waku": "pnpm --filter waku build"
+  }
+}

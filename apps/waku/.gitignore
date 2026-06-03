@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# fumadocs generated
+.source
+
+# waku
+/dist
+src/pages.gen.ts
+
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+*.log
+*.tsbuildinfo

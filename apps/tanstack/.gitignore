@@ -1,0 +1,32 @@
+# dependencies
+/node_modules
+
+# fumadocs generated
+.source
+
+# tanstack / vite / nitro
+.cache
+.tanstack
+.vercel
+.output
+.nitro
+/build/
+/api/
+/server/build
+/public/build
+
+# test
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+*.log
+*.tsbuildinfo

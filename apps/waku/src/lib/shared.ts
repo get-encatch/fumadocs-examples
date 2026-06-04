@@ -1,4 +1,4 @@
-export const appName = 'Waku';
+export const appName = 'Encatch example';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';

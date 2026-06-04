@@ -1,4 +1,4 @@
-export const appName = 'React Router';
+export const appName = 'Encatch example';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';

@@ -23,7 +23,11 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Fumadocs on TanStack Start',
+        title: 'Encatch example',
+      },
+      {
+        name: 'theme-color',
+        content: '#fff',
       },
     ],
     links: [{ rel: 'stylesheet', href: appCss }],
@@ -40,7 +44,7 @@ function RootComponent() {
       <head>
         <HeadContent />
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body className="framework relative flex min-h-screen flex-col">
         <EncatchInit locale={locale} />
         <RootProvider i18n={getI18nProvider(locale)}>
           <Outlet />

@@ -2,6 +2,62 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+@theme {
+  --spacing-page: 1436px;
+  --color-brand: hsl(26, 73%, 51%);
+  --color-brand-foreground: white;
+  --color-brand-secondary: #c6bb58;
+  --color-brand-secondary-foreground: #97890c;
+  --color-brand-200: hsl(33, 100%, 50%);
+
+  --color-landing-foreground: #59592a;
+  --color-landing-foreground-200: #a8a866;
+
+  /* Framework docs accent (fumadocs.dev Quick Start) */
+  --color-fd-primary: hsl(41, 100%, 40%);
+  --color-fd-primary-foreground: hsl(0, 0%, 98%);
+  --color-fd-ring: hsl(41, 100%, 40%);
+}
+
+.dark {
+  --color-landing-foreground: #e4e2d0;
+  --color-landing-foreground-200: #b7af7e;
+
+  --color-brand: #fff383;
+  --color-brand-secondary: #fc7744;
+  --color-brand-secondary-foreground: #521700;
+  --color-brand-foreground: black;
+  --color-brand-200: #fff7c8;
+
+  --color-fd-primary: #fff383;
+  --color-fd-primary-foreground: hsl(0, 0%, 9%);
+  --color-fd-ring: #fff383;
+}
+
+.ui {
+  --color-fd-primary: var(--ui-color);
+}
+
+.headless {
+  --color-fd-primary: var(--headless-color);
+}
+
+.framework {
+  --color-fd-primary: var(--framework-color);
+}
+
+:root {
+  --headless-color: hsl(250, 80%, 54%);
+  --framework-color: hsl(41, 100%, 40%);
+  --ui-color: hsl(217, 100%, 58%);
+}
+
+.dark {
+  --headless-color: hsl(250 100% 80%);
+  --framework-color: #fff383;
+  --ui-color: #a9ceff;
+}
+
 html {
   scrollbar-gutter: stable;
 }
@@ -9,4 +65,15 @@ html {
 html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
+}
+
+/* Match fumadocs.dev: <body class="framework"> sets accent for sidebar, TOC, links */
+body {
+  --color-fd-primary: var(--framework-color);
+  --color-fd-primary-foreground: hsl(0, 0%, 98%);
+  background-color: var(--color-fd-background);
+}
+
+.dark body {
+  --color-fd-primary-foreground: hsl(0, 0%, 9%);
 }

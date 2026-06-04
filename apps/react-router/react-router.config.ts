@@ -24,12 +24,7 @@ export default {
     v8_trailingSlashAwareDataRequests: true,
   },
   async prerender({ getStaticPaths }) {
-    const paths: string[] = [];
-    const excluded = ['/api/search'];
-
-    for (const path of getStaticPaths()) {
-      if (!excluded.includes(path)) paths.push(path);
-    }
+    const paths: string[] = [...getStaticPaths()];
 
     for await (const entry of glob('**/*.mdx', { cwd: 'content/docs' })) {
       const [lang, ...rest] = entry.split('/');

@@ -46,7 +46,7 @@ function RootComponent() {
       </head>
       <body className="framework relative flex min-h-screen flex-col">
         <EncatchInit locale={locale} />
-        <RootProvider i18n={getI18nProvider(locale)}>
+        <RootProvider i18n={getI18nProvider(locale)} search={{ enabled: false }}>
           <Outlet />
         </RootProvider>
         <Scripts />

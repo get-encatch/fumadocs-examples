@@ -34,7 +34,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="framework relative flex min-h-screen flex-col">
         <EncatchInit locale={locale} />
-        <RootProvider i18n={getI18nProvider(locale)}>{children}</RootProvider>
+        <RootProvider i18n={getI18nProvider(locale)} search={{ enabled: false }}>
+          {children}
+        </RootProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

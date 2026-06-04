@@ -26,8 +26,6 @@ export const translations = i18n
     },
     es: {
       displayName: 'Español',
-      search: 'Buscar en la documentación',
-      searchNoResult: 'No se encontraron resultados',
       chooseLanguage: 'Elegir idioma',
       nextPage: 'Página siguiente',
       previousPage: 'Página anterior',
@@ -56,6 +54,7 @@ export const translations = i18n
 export function baseOptions(_locale?: string): BaseLayoutProps {
   return {
     i18n: true,
+    searchToggle: false,
     nav: {
       title: appName,
     },

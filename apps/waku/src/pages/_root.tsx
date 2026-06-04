@@ -10,6 +10,7 @@ export default async function RootElement({ children }: { children: ReactNode })
       <body
         data-version="1.0"
         className="framework relative flex min-h-screen flex-col"
+        suppressHydrationWarning
       >
         <Provider>
           <DocumentLang />

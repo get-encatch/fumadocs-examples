@@ -44,7 +44,10 @@ function RootComponent() {
       <head>
         <HeadContent />
       </head>
-      <body className="framework relative flex min-h-screen flex-col">
+      <body
+        className="framework relative flex min-h-screen flex-col"
+        suppressHydrationWarning
+      >
         <EncatchInit locale={locale} />
         <RootProvider i18n={getI18nProvider(locale)} search={{ enabled: false }}>
           <Outlet />

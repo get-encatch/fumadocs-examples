@@ -22,7 +22,10 @@ export default async function Layout({ params, children }: LayoutProps<'/[lang]'
 
   return (
     <html lang={lang} className={geist.className} suppressHydrationWarning>
-      <body className="framework relative flex min-h-screen flex-col">
+      <body
+        className="framework relative flex min-h-screen flex-col"
+        suppressHydrationWarning
+      >
         <EncatchInit locale={lang} />
         <RootProvider i18n={getI18nProvider(lang)} search={{ enabled: false }}>
           {children}

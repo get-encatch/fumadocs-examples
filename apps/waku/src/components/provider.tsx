@@ -32,7 +32,9 @@ export function Provider({ children }: { children: ReactNode }) {
   return (
     <>
       <EncatchInit locale={locale} />
-      <RootProvider i18n={i18n}>{children}</RootProvider>
+      <RootProvider i18n={i18n} search={{ enabled: false }}>
+        {children}
+      </RootProvider>
     </>
   );
 }

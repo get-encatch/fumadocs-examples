@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as LlmsFullDottxtRouteImport } from './routes/llms-full[.]txt'
 import { Route as Char123LangChar125IndexRouteImport } from './routes/{-$lang}/index'
-import { Route as ApiSearchRouteImport } from './routes/api/search'
 import { Route as Char123LangChar125DocsChar123Char125DotmdRouteImport } from './routes/{-$lang}/docs/{$}[.]md'
 import { Route as Char123LangChar125DocsSplatRouteImport } from './routes/{-$lang}/docs/$'
 
@@ -31,11 +30,6 @@ const Char123LangChar125IndexRoute = Char123LangChar125IndexRouteImport.update({
   path: '/{-$lang}/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiSearchRoute = ApiSearchRouteImport.update({
-  id: '/api/search',
-  path: '/api/search',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const Char123LangChar125DocsChar123Char125DotmdRoute =
   Char123LangChar125DocsChar123Char125DotmdRouteImport.update({
     id: '/{-$lang}/docs/{$}.md',
@@ -52,7 +46,6 @@ const Char123LangChar125DocsSplatRoute =
 export interface FileRoutesByFullPath {
   '/llms-full.txt': typeof LlmsFullDottxtRoute
   '/llms.txt': typeof LlmsDottxtRoute
-  '/api/search': typeof ApiSearchRoute
   '/{-$lang}/': typeof Char123LangChar125IndexRoute
   '/{-$lang}/docs/$': typeof Char123LangChar125DocsSplatRoute
   '/{-$lang}/docs/{$}.md': typeof Char123LangChar125DocsChar123Char125DotmdRoute
@@ -60,7 +53,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/llms-full.txt': typeof LlmsFullDottxtRoute
   '/llms.txt': typeof LlmsDottxtRoute
-  '/api/search': typeof ApiSearchRoute
   '/{-$lang}': typeof Char123LangChar125IndexRoute
   '/{-$lang}/docs/$': typeof Char123LangChar125DocsSplatRoute
   '/{-$lang}/docs/{$}.md': typeof Char123LangChar125DocsChar123Char125DotmdRoute
@@ -69,7 +61,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/llms-full.txt': typeof LlmsFullDottxtRoute
   '/llms.txt': typeof LlmsDottxtRoute
-  '/api/search': typeof ApiSearchRoute
   '/{-$lang}/': typeof Char123LangChar125IndexRoute
   '/{-$lang}/docs/$': typeof Char123LangChar125DocsSplatRoute
   '/{-$lang}/docs/{$}.md': typeof Char123LangChar125DocsChar123Char125DotmdRoute
@@ -79,7 +70,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/llms-full.txt'
     | '/llms.txt'
-    | '/api/search'
     | '/{-$lang}/'
     | '/{-$lang}/docs/$'
     | '/{-$lang}/docs/{$}.md'
@@ -87,7 +77,6 @@ export interface FileRouteTypes {
   to:
     | '/llms-full.txt'
     | '/llms.txt'
-    | '/api/search'
     | '/{-$lang}'
     | '/{-$lang}/docs/$'
     | '/{-$lang}/docs/{$}.md'
@@ -95,7 +84,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/llms-full.txt'
     | '/llms.txt'
-    | '/api/search'
     | '/{-$lang}/'
     | '/{-$lang}/docs/$'
     | '/{-$lang}/docs/{$}.md'
@@ -104,7 +92,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   LlmsFullDottxtRoute: typeof LlmsFullDottxtRoute
   LlmsDottxtRoute: typeof LlmsDottxtRoute
-  ApiSearchRoute: typeof ApiSearchRoute
   Char123LangChar125IndexRoute: typeof Char123LangChar125IndexRoute
   Char123LangChar125DocsSplatRoute: typeof Char123LangChar125DocsSplatRoute
   Char123LangChar125DocsChar123Char125DotmdRoute: typeof Char123LangChar125DocsChar123Char125DotmdRoute
@@ -133,13 +120,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LangChar125IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/search': {
-      id: '/api/search'
-      path: '/api/search'
-      fullPath: '/api/search'
-      preLoaderRoute: typeof ApiSearchRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/{-$lang}/docs/{$}.md': {
       id: '/{-$lang}/docs/{$}.md'
       path: '/{-$lang}/docs/{$}.md'
@@ -160,7 +140,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   LlmsFullDottxtRoute: LlmsFullDottxtRoute,
   LlmsDottxtRoute: LlmsDottxtRoute,
-  ApiSearchRoute: ApiSearchRoute,
   Char123LangChar125IndexRoute: Char123LangChar125IndexRoute,
   Char123LangChar125DocsSplatRoute: Char123LangChar125DocsSplatRoute,
   Char123LangChar125DocsChar123Char125DotmdRoute:

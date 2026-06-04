@@ -2,12 +2,12 @@ import type { Route } from './+types/home';
 import { HomeLayout } from 'fumadocs-ui/layouts/home';
 import { Link, useParams } from 'react-router';
 import { baseOptions } from '@/lib/layout.shared';
-import { appName } from '@/lib/shared';
+import { homeEyebrow } from '@/lib/shared';
 import { i18n, resolveLocale } from '@/lib/i18n';
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Encatch example' },
+    { title: 'Encatch × Fumadocs — React Router example' },
     {
       name: 'description',
       content: 'Encatch page feedback on Fumadocs — sample documentation site.',
@@ -24,11 +24,8 @@ export default function Home() {
   return (
     <HomeLayout {...baseOptions(locale)}>
       <div className="flex flex-1 flex-col items-center justify-center px-4 py-16 text-center">
-        <p className="mb-3 text-sm font-medium tracking-tight text-landing-foreground-200">
-          Encatch × Fumadocs
-        </p>
         <h1 className="mb-4 max-w-xl text-3xl font-medium tracking-tight text-landing-foreground lg:text-4xl">
-          {appName}
+          {homeEyebrow}
         </h1>
         <p className="mb-8 max-w-md text-fd-muted-foreground">
           Sample docs site with Encatch page feedback in the footer — built on Fumadocs.

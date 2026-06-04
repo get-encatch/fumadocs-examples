@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { appName } from '@/lib/shared';
+import { homeEyebrow } from '@/lib/shared';
 
 export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params;
@@ -7,11 +7,8 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
 
   return (
     <div className="flex flex-1 flex-col items-center justify-center px-4 py-16 text-center">
-      <p className="mb-3 text-sm font-medium tracking-tight text-landing-foreground-200">
-        Encatch × Fumadocs
-      </p>
       <h1 className="mb-4 max-w-xl text-3xl font-medium tracking-tight text-landing-foreground lg:text-4xl">
-        {appName}
+        {homeEyebrow}
       </h1>
       <p className="mb-8 max-w-md text-fd-muted-foreground">
         Sample docs site with Encatch page feedback in the footer — built on Fumadocs.

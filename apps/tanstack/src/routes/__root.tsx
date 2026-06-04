@@ -23,7 +23,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Encatch example',
+        title: 'Encatch × Fumadocs — TanStack example',
       },
       {
         name: 'theme-color',

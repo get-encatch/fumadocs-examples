@@ -4,9 +4,9 @@ export const homeEyebrow = `Encatch × Fumadocs — ${frameworkExample}`;
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 
-// fill this with your actual GitHub info, for example:
 export const gitConfig = {
-  user: 'fuma-nama',
-  repo: 'fumadocs',
+  user: 'get-encatch',
+  repo: 'fumadocs-examples',
   branch: 'main',
+  contentRoot: 'apps/tanstack/content/docs',
 };

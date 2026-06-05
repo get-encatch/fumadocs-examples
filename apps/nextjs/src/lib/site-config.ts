@@ -1,8 +1,8 @@
 export const siteConfig = {
   github: {
-    owner: 'your-org',
-    repo: 'your-repo',
+    owner: 'get-encatch',
+    repo: 'fumadocs-examples',
     branch: 'main',
-    contentRoot: 'content/docs',
+    contentRoot: 'apps/nextjs/content/docs',
   },
 };

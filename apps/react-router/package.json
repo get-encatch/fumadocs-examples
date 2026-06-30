@@ -11,7 +11,7 @@
     "lint": "oxlint"
   },
   "dependencies": {
-    "@encatch/web-sdk": "^1.3.0",
+    "@encatch/web-sdk": "^1.4.0",
     "@react-router/node": "^7.15.1",
     "@react-router/serve": "^7.15.1",
     "@takumi-rs/image-response": "^1.6.0",

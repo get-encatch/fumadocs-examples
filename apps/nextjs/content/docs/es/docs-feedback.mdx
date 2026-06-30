@@ -9,6 +9,8 @@ Una buena documentación depende de saber qué páginas ayudan y cuáles confund
 
 Cada página de documentación en este repositorio incluye un pie de página con:
 
-- **¿Te resultó útil esta página?** — Sí / No abre un formulario de Encatch con la URL de la página y tu elección (`yes` / `no`) prellenadas (configura `NEXT_PUBLIC_ENCATCH_HELPFUL_*` en `.env.example`).
-- **Sugerir ediciones** — Abre un formulario de Encatch con la URL de la página actual prellenada (configura las variables `NEXT_PUBLIC_*` en `.env.example`).
-- **Reportar un problema** — Abre un formulario de Encatch con la URL de la página actual prellenada (configura las variables `NEXT_PUBLIC_*` en `.env.example`).
+- **¿Te resultó útil esta página?** — Sí / No abre el formulario combinado de Encatch con enrutamiento (`page-helpful`), la URL de la página y tu elección (`yes` / `no`) prellenadas.
+- **Sugerir ediciones** — Abre el mismo formulario con enrutamiento (`suggest-edit`) y la URL de la página actual prellenada.
+- **Reportar un problema** — Abre el mismo formulario con enrutamiento (`raise-issue`) y la URL de la página actual prellenada.
+
+Configura el slug del formulario y los slugs de las preguntas mediante `NEXT_PUBLIC_ENCATCH_*` en `.env.example`.

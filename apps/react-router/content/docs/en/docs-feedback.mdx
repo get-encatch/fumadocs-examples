@@ -5,10 +5,28 @@ description: Collect page-level feedback without leaving your documentation site
 
 Good documentation depends on knowing which pages help and which ones confuse readers. Encatch fits naturally at the bottom of a Fumadocs page: readers stay on your docs site, and you get structured feedback tied to the page they were reading.
 
+## Get the feedback form
+
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<p><strong>Don't have the feedback form yet?</strong></p>
+<p>Click the button to install a ready-made documentation feedback form in your Encatch workspace. It creates the combined form used in this example — helpful votes, suggest edits, and issue reports — with no manual form builder setup.</p>
+</td>
+<td align="center" valign="middle" width="210">
+<a href="https://templates.encatch.com/templates/preview/documentation-frameworks/docs-feedback"><img src="https://encatch.com/button" alt="Encatch it" width="210" height="42" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## What this example adds
 
 Each docs page in this repo includes a footer with:
 
-- **Was this page helpful?** — Yes / No opens an Encatch form with the page URL and your choice (`yes` / `no`) prefilled (configure via `VITE_ENCATCH_HELPFUL_*` in `.env.example`).
-- **Suggest edits** — Opens an Encatch form with the current page URL prefilled (configure via `VITE_*` env vars in `.env.example`).
-- **Raise issue** — Opens an Encatch form with the current page URL prefilled (configure via `VITE_*` env vars in `.env.example`).
+- **Was this page helpful?** — Yes / No opens the combined Encatch feedback form with routing (`page-helpful`), the page URL, and your choice (`yes` / `no`) prefilled.
+- **Suggest edits** — Opens the same form with routing (`suggest-edit`) and the current page URL prefilled.
+- **Raise issue** — Opens the same form with routing (`raise-issue`) and the current page URL prefilled.
+
+Configure the form slug and question slugs via `VITE_ENCATCH_*` in `.env.example`.

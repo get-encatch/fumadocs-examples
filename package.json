@@ -1,6 +1,9 @@
 {
   "name": "encatch-fumadocs-examples",
   "private": true,
+  "dependencies": {
+    "next": "16.2.7"
+  },
   "scripts": {
     "dev:nextjs": "pnpm --filter nextjs dev",
     "dev:tanstack": "pnpm --filter tanstack dev",
@@ -9,6 +12,11 @@
     "build:nextjs": "pnpm --filter nextjs build",
     "build:tanstack": "pnpm --filter tanstack build",
     "build:react-router": "pnpm --filter react-router build",
-    "build:waku": "pnpm --filter waku build"
+    "build:waku": "pnpm --filter waku build",
+    "test:visual": "playwright test",
+    "test:visual:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0"
   }
 }

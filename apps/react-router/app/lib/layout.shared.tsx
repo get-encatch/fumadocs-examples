@@ -24,15 +24,6 @@ export const translations = i18n
     en: {
       displayName: 'English',
     },
-    es: {
-      displayName: 'Español',
-      chooseLanguage: 'Elegir idioma',
-      nextPage: 'Página siguiente',
-      previousPage: 'Página anterior',
-      toc: 'En esta página',
-      tocNoHeadings: 'Sin encabezados',
-      lastUpdate: 'Última actualización',
-    },
   })
   .add('docsFeedback', {
     en: {
@@ -42,18 +33,11 @@ export const translations = i18n
       suggestEdits: 'Suggest edits',
       raiseIssue: 'Raise issue',
     },
-    es: {
-      helpfulQuestion: '¿Te resultó útil esta página?',
-      yes: 'Sí',
-      no: 'No',
-      suggestEdits: 'Sugerir ediciones',
-      raiseIssue: 'Reportar un problema',
-    },
   });
 
 export function baseOptions(_locale?: string): BaseLayoutProps {
   return {
-    i18n: true,
+    i18n: false,
     searchToggle: false,
     nav: {
       title: appName,

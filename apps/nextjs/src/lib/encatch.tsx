@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { _encatch } from '@encatch/web-sdk';
-import type { Theme } from '@encatch/web-sdk';
+import type { EncatchConfig as EncatchInitConfig, Theme } from '@encatch/web-sdk';
 
 /**
  * Encatch Web SDK integration for Fumadocs docs feedback.
@@ -12,6 +12,35 @@ import type { Theme } from '@encatch/web-sdk';
  * - open*Form: open the combined documentation feedback form with routing
  *   prefilled via logic jumps (page helpful, suggest edit, raise issue).
  */
+
+function trimEnv(value: string | undefined): string | undefined {
+  const trimmed = value?.trim();
+  return trimmed || undefined;
+}
+
+function toEncatchHostUrl(value: string | undefined): string | undefined {
+  const trimmed = trimEnv(value);
+  if (!trimmed) {
+    return undefined;
+  }
+  if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
+    return trimmed;
+  }
+  return `https://${trimmed}`;
+}
+
+function buildEncatchInitConfig(options?: { theme?: Theme }): EncatchInitConfig {
+  const config: EncatchInitConfig = { theme: options?.theme ?? 'system' };
+  const webHost = toEncatchHostUrl(process.env.NEXT_PUBLIC_ENCATCH_WEB_HOST);
+  const apiHost = toEncatchHostUrl(process.env.NEXT_PUBLIC_ENCATCH_API_HOST);
+  if (webHost) {
+    config.webHost = webHost;
+  }
+  if (apiHost) {
+    config.apiBaseUrl = apiHost;
+  }
+  return config;
+}
 
 /** Ensure `_encatch.init` has run before `showForm` / other SDK calls. */
 export function ensureEncatchInitialized(options?: { theme?: Theme }): boolean {
@@ -26,7 +55,7 @@ export function ensureEncatchInitialized(options?: { theme?: Theme }): boolean {
   if (!_encatch._initialized) {
     try {
       const theme: Theme = options?.theme ?? 'system';
-      _encatch.init(apiKey, { theme });
+      _encatch.init(apiKey, buildEncatchInitConfig(options));
     } catch (error) {
       console.error('Encatch init failed:', error);
       return false;

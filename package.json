@@ -12,6 +12,11 @@
     "build:nextjs": "pnpm --filter nextjs build",
     "build:tanstack": "pnpm --filter tanstack build",
     "build:react-router": "pnpm --filter react-router build",
-    "build:waku": "pnpm --filter waku build"
+    "build:waku": "pnpm --filter waku build",
+    "test:visual": "playwright test",
+    "test:visual:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0"
   }
 }

@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@encatch/web-sdk": "^1.4.0",
-    "@takumi-rs/image-response": "^1.6.0",
+    "@takumi-rs/image-response": "^2.0.1",
     "fumadocs-core": "16.9.3",
     "fumadocs-mdx": "15.0.10",
     "fumadocs-ui": "16.9.3",

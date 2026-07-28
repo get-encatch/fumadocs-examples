@@ -2,7 +2,7 @@
   "name": "encatch-fumadocs-examples",
   "private": true,
   "dependencies": {
-    "next": "16.2.7"
+    "next": "16.2.11"
   },
   "scripts": {
     "dev:nextjs": "pnpm --filter nextjs dev",
